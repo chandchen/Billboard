@@ -1,0 +1,51 @@
+{% extends 'blog/base.html' %}
+{% load staticfiles %}
+{% block title %}Superman{% endblock %}
+		{% block content %}
+
+	<div class="fh5co-loader"></div>
+	
+	<div id="page">
+		<div id="fh5co-aside" style="background-image: url({% static 'images/image_1.jpg' %})">
+			<div class="overlay"></div>
+			<nav role="navigation">
+				<ul>
+					<li><a href="{% url 'blog:post_list' %}"><i class="icon-home"></i></a></li>
+				</ul>
+			</nav>
+			<div class="featured">
+				<span>Bio</span>
+				<h2>I'm Chand Chen </h2>
+			</div>
+		</div>
+		<div id="fh5co-main-content">
+			<div class="fh5co-post">
+			{% for post in posts %}
+				<div class="fh5co-entry padding">
+					<img src="{{ post.poster.url }}" alt="{{ post.title }}">
+					<div>
+						<span class="fh5co-post-date">{{ post.publish }} by {{ post.author }}</span>
+						<h2><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
+						<p>{{ post.body|truncatewords:30|linebreaks }}</p>
+					</div>
+				</div>
+			{% endfor %}
+				<div class="fh5co-entry padding">
+				{% include "blog/pagination.html" with page=page_obj %}
+				</div>
+
+				</div>
+				<footer>
+					<div>
+					&copy; 2017 changeduchen. All Rights Reserved.
+					</div>
+				</footer>
+			</div>
+		</div>
+
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+
+{% endblock %}

@@ -1,2 +1,2 @@
 # Superman
-Build complete blog project, ready for production use.
+Build a complete blog application, ready for production use.

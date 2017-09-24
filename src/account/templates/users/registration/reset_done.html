@@ -1,0 +1,20 @@
+{% extends 'users/base.html' %}
+
+{% block title %}Reset your password done{% endblock %}
+
+{% block content %}
+<div class="flex-center">
+    <div class="container">
+        <div>
+            <h1 class="logo"><a href="{% url 'index' %}">Bear Home</a></h1>
+            <h3>Link for reset password already email to you.</h3>
+            <p>
+                If your account as you entered email exist, you will recieve the reset link shortly, please check.
+            </p>
+            <p>
+                If you don't receive teh email, make sure your register email is correct.
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}
