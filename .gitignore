@@ -1,12 +1,4 @@
 *.pyc
 *.pyo
 .idea
-.installed.cfg
-media
 migrations
-bin
-develop-eggs
-eggs
-parts
-src/*.egg-info
-src/db.sqlite3
