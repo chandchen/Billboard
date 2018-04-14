@@ -3,7 +3,7 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 
-from welcome.views import index, health
+from welcome.views import index, health, about
 
 from accounts.views import (login_view, register_view, logout_view)
 
@@ -13,9 +13,10 @@ urlpatterns = [
     # url(r'^$', 'project.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
-    url(r'^$', index),
+    url(r'^$', about),
     url(r'^health$', health),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^info$', index),
 
     # new add
     url(r'^comments/', include("comments.urls", namespace='comments')),

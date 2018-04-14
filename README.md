@@ -1,3 +1,8 @@
-# Openshift Project: Superman
+# Deployment of Openshift Project: Billboard
 
-Build a complete blog application, ready for production use.
+#### Todo list:
+
+- Easy way to create a home page for website used (including some personal information)
+
+- Able to add posts(both display articles and images) in the backend
+
